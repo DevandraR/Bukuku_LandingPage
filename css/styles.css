@@ -26,13 +26,24 @@ html {
     border-bottom-right-radius: 0.5rem;
 }
 
-/* Custom styling for testimonials */
+/* Custom styling for testimonials - keeping for reference but not used */
 .testimonial-card {
     transition: transform 0.3s ease;
 }
 
 .testimonial-card:hover {
     transform: translateY(-10px);
+}
+
+/* Enhanced value proposition styling */
+.value-prop-card {
+    transition: all 0.3s ease;
+    border-left: 4px solid transparent;
+}
+
+.value-prop-card:hover {
+    transform: translateX(5px);
+    border-left: 4px solid #10b981; /* Emerald-500 */
 }
 
 /* Phone frame styling - fixing z-index issue */

@@ -4,16 +4,20 @@ let slideInterval;
 
 // Initialize the slideshow
 document.addEventListener('DOMContentLoaded', function() {
-    showSlides(slideIndex);
+    setupSlides(slideIndex);
     startSlideshow();
+    
+    // Add event listeners for slideshow controls
+    document.querySelector('.app-slideshow-container').addEventListener('mouseenter', stopSlideshow);
+    document.querySelector('.app-slideshow-container').addEventListener('mouseleave', startSlideshow);
 });
 
 // Start automatic slideshow
 function startSlideshow() {
-    stopSlideshow(); // Clear any existing intervals
+    stopSlideshow();
     slideInterval = setInterval(() => {
         changeSlide(1);
-    }, 5000); // Change slide every 5 seconds
+    }, 4000); // Change slide every 4 seconds
 }
 
 // Stop the automatic slideshow
@@ -25,46 +29,54 @@ function stopSlideshow() {
 
 // Next/previous controls
 function changeSlide(n) {
-    showSlides(slideIndex += n);
-    startSlideshow(); // Restart the timer whenever manually changed
+    setupSlides(slideIndex += n);
+    startSlideshow();
 }
 
 // Thumbnail image controls
 function currentSlide(n) {
-    showSlides(slideIndex = n);
-    startSlideshow(); // Restart the timer whenever manually changed
+    setupSlides(slideIndex = n);
+    startSlideshow();
 }
 
-function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("app-slides");
-    let dots = document.getElementsByClassName("dot");
+function setupSlides(n) {
+    const slides = document.getElementsByClassName("app-slides");
+    const dots = document.getElementsByClassName("dot");
     
     // Handle index out of bounds
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
+    if (n > slides.length) {
+        slideIndex = 1;
+    }
+    if (n < 1) {
+        slideIndex = slides.length;
+    }
     
-    // Hide all slides
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
+    // Reset all slides (remove all positioning classes)
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].classList.remove('active', 'left', 'right');
+        slides[i].style.display = "block"; // Make sure all slides are displayed
     }
     
     // Remove active class from all dots
-    for (i = 0; i < dots.length; i++) {
+    for (let i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" active-dot", "");
     }
     
-    // Show the current slide and activate corresponding dot
-    slides[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += " active-dot";
+    // Calculate previous and next slide indices
+    let prevIndex = slideIndex - 2;
+    if (prevIndex < 0) prevIndex = slides.length - 1;
+    
+    let nextIndex = slideIndex % slides.length;
+    
+    // Set current slide as active (center)
+    slides[slideIndex - 1].classList.add('active');
+    
+    // Set previous slide to left
+    slides[prevIndex].classList.add('left');
+    
+    // Set next slide to right
+    slides[nextIndex].classList.add('right');
+    
+    // Activate corresponding dot
+    dots[slideIndex - 1].className += " active-dot";
 }
-
-// Event listeners for slideshow controls
-document.addEventListener('DOMContentLoaded', function() {
-    // Pause slideshow when user hovers over it
-    const slideshowContainer = document.querySelector('.app-slideshow-container');
-    if (slideshowContainer) {
-        slideshowContainer.addEventListener('mouseenter', stopSlideshow);
-        slideshowContainer.addEventListener('mouseleave', startSlideshow);
-    }
-});

@@ -2,36 +2,50 @@
 .app-slideshow-container {
     position: relative;
     padding: 0 40px;
-    margin-bottom: 30px;
+    margin: 0 auto;
+    overflow: hidden;
+    perspective: 1000px; /* 3D perspective effect */
+    height: 650px; /* Increased height to avoid cutting off content */
+    margin-bottom: 40px; /* Extra space at the bottom */
 }
 
-/* Hide slides by default */
+/* Slide positioning */
 .app-slides {
-    display: none;
-    padding: 0 20px;
-    text-align: center; /* Center all content */
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    transition: all 0.6s ease;
+    opacity: 0;
+    margin: 0 auto;
+    transform: scale(0.8);
 }
 
-/* Show the first slide by default */
-.app-slides:first-child {
+/* Active slide (center) */
+.app-slides.active {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    z-index: 10;
+}
+
+/* Slide to the left (previous) */
+.app-slides.left {
+    opacity: 0.3;
+    transform: translateX(-30%) scale(0.7);
+    z-index: 5;
+}
+
+/* Slide to the right (next) */
+.app-slides.right {
+    opacity: 0.3;
+    transform: translateX(30%) scale(0.7);
+    z-index: 5;
+}
+
+/* Center the phone in each slide */
+.app-slides .phone-frame-container {
+    margin: 0 auto;
     display: block;
-}
-
-/* Center the phone in the slideshow */
-.app-slideshow-container .phone-frame-container {
-    margin: 0 auto; /* Center the phone frame */
-    display: block; /* Ensure proper block display */
-}
-
-/* Fade animation */
-.fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-
-@keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
 }
 
 /* Next & previous buttons */
@@ -51,7 +65,7 @@
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.8);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    z-index: 5;
+    z-index: 20;
 }
 
 .prev-slide {
@@ -69,6 +83,7 @@
 /* The dots/indicators */
 .dots-container {
     margin-top: 20px;
+    text-align: center;
 }
 
 .dot {

@@ -7,25 +7,57 @@
     <meta name="description" content="Bukuku membantu mahasiswa membangun kebiasaan membaca yang berkelanjutan dengan fitur inovatif untuk buku fisik dan digital">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/slideshow.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-blue: #3573FF;
+            --primary-green: #3AC477;
+            --primary-purple: #9B5FC7;
+            --primary-red: #E53C25;
+            --primary-yellow: #FFAF01;
+        }
+        
+        .bg-app-blue { background-color: #3573FF; }
+        .bg-app-green { background-color: #3AC477; }
+        .bg-app-purple { background-color: #9B5FC7; }
+        .bg-app-red { background-color: #E53C25; }
+        .bg-app-yellow { background-color: #FFAF01; }
+        
+        .text-app-blue { color: #3573FF; }
+        .text-app-green { color: #3AC477; }
+        .text-app-purple { color: #9B5FC7; }
+        .text-app-red { color: #E53C25; }
+        .text-app-yellow { color: #FFAF01; }
+        
+        .hover\:bg-app-blue:hover { background-color: #2c5fd9; }
+        .hover\:bg-app-green:hover { background-color: #32a665; }
+        .hover\:bg-app-purple:hover { background-color: #8247b5; }
+        .hover\:text-app-purple:hover { color: #9B5FC7; }
+        
+        .border-app-blue { border-color: #3573FF; }
+        .border-app-green { border-color: #3AC477; }
+        .border-app-purple { border-color: #9B5FC7; }
+        .border-app-red { border-color: #E53C25; }
+        .border-app-yellow { border-color: #FFAF01; }
+    </style>
 </head>
 <body class="font-sans antialiased text-gray-800">
     <!-- Navigation -->
     <nav class="bg-white shadow-sm fixed w-full z-10">
         <div class="container mx-auto px-6 py-3 flex justify-between items-center">
             <div class="flex items-center">
-                <img src="./images/logo.svg" alt="Bukuku Logo" class="h-8">
-                <span class="ml-3 text-xl font-bold text-green-600">Bukuku</span>
+                <span class="ml-3 text-xl font-bold text-app-green">Bukuku</span>
             </div>
             <div class="hidden md:flex space-x-10">
-                <a href="#features" class="text-gray-600 hover:text-green-600 transition">Fitur</a>
-                <a href="#value-proposition" class="text-gray-600 hover:text-green-600 transition">Value</a>
-                <a href="#how-it-works" class="text-gray-600 hover:text-green-600 transition">Cara Kerja</a>
-                <a href="#opportunity" class="text-gray-600 hover:text-green-600 transition">Kesempatan</a>
+                <a href="#features" class="text-gray-600 hover:text-app-purple transition">Fitur</a>
+                <a href="#value-proposition" class="text-gray-600 hover:text-app-purple transition">Value</a>
+                <a href="#how-it-works" class="text-gray-600 hover:text-app-purple transition">Cara Kerja</a>
+                <a href="#opportunity" class="text-gray-600 hover:text-app-purple transition">Kesempatan</a>
             </div>
             <div>
-                <a href="#download" class="hidden md:inline-block bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg shadow transition">Download</a>
+                <a href="#download" class="hidden md:inline-block bg-app-purple hover:bg-app-purple text-white px-4 py-2 rounded-lg shadow transition">Download</a>
                 <button id="mobile-menu-button" class="md:hidden focus:outline-none">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -35,25 +67,25 @@
         </div>
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden px-6 py-4 bg-white border-t">
-            <a href="#features" class="block py-2 text-gray-600 hover:text-green-600">Fitur</a>
-            <a href="#value-proposition" class="block py-2 text-gray-600 hover:text-green-600">Value</a>
-            <a href="#how-it-works" class="block py-2 text-gray-600 hover:text-green-600">Cara Kerja</a>
-            <a href="#opportunity" class="block py-2 text-gray-600 hover:text-green-600">Kesempatan</a>
-            <a href="#download" class="block py-2 mt-4 bg-green-600 hover:text-green-700 text-white px-4 rounded-lg shadow text-center">Download</a>
+            <a href="#features" class="block py-2 text-gray-600 hover:text-app-purple">Fitur</a>
+            <a href="#value-proposition" class="block py-2 text-gray-600 hover:text-app-purple">Value</a>
+            <a href="#how-it-works" class="block py-2 text-gray-600 hover:text-app-purple">Cara Kerja</a>
+            <a href="#opportunity" class="block py-2 text-gray-600 hover:text-app-purple">Kesempatan</a>
+            <a href="#download" class="block py-2 mt-4 bg-app-purple hover:bg-app-purple text-white px-4 rounded-lg shadow text-center">Download</a>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="pt-24 pb-20 bg-gradient-to-br from-green-50 to-emerald-100">
+    <section class="pt-24 pb-20 bg-gradient-to-br from-purple-50 to-blue-50">
         <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
             <div class="md:w-1/2 flex flex-col justify-center items-start mb-16 md:mb-0 text-center md:text-left">
                 <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">Bangun Kebiasaan Membaca Yang Berkelanjutan</h1>
                 <p class="text-xl md:text-2xl mb-8 text-gray-600">Bukuku memadukan pengalaman membaca buku fisik dan digital dalam satu aplikasi yang inovatif untuk mahasiswa dan pecinta buku.</p>
                 <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 w-full sm:w-auto">
-                    <a href="#download" class="bg-green-600 hover:bg-green-700 text-white text-lg font-semibold px-6 py-3 rounded-lg shadow transition flex items-center justify-center">
+                    <a href="#download" class="bg-app-purple hover:bg-app-purple text-white text-lg font-semibold px-6 py-3 rounded-lg shadow transition flex items-center justify-center">
                         <i class="fab fa-apple mr-2"></i> App Store
                     </a>
-                    <a href="#download" class="bg-black hover:bg-gray-900 text-white text-lg font-semibold px-6 py-3 rounded-lg shadow transition flex items-center justify-center">
+                    <a href="#download" class="bg-gray-800 hover:bg-gray-900 text-white text-lg font-semibold px-6 py-3 rounded-lg shadow transition flex items-center justify-center">
                         <i class="fab fa-google-play mr-2"></i> Google Play
                     </a>
                 </div>
@@ -63,7 +95,7 @@
                 <div class="relative">
                     <div class="phone-frame">
                         <div class="phone-frame-inner overflow-hidden">
-                            <img src="./images/app-showcase.png" alt="Bukuku App Preview" class="w-full h-full object-cover">
+                            <img src="./images/Onboard.png" alt="Bukuku App Preview" class="w-full h-full object-cover">
                         </div>
                         <div class="phone-notch"></div>
                     </div>
@@ -79,37 +111,60 @@
                 <h2 class="text-3xl font-bold text-gray-800">Preview Aplikasi</h2>
                 <p class="text-gray-600 mt-4 text-xl">Lihat bagaimana Bukuku meningkatkan pengalaman membacamu</p>
             </div>
-            <div class="flex flex-wrap justify-center gap-8">
-                <!-- Multiple Phone Frame Previews -->
-                <div class="relative phone-frame-container">
-                    <div class="phone-frame">
-                        <div class="phone-frame-inner overflow-hidden">
-                            <img src="./images/app-screen1.png" alt="Home Screen" class="w-full h-full object-cover">
+            
+            <!-- Slideshow container - Fixed positioning -->
+            <div class="app-slideshow-container max-w-3xl mx-auto relative">
+                <!-- Slides - Improved centering -->
+                <div class="app-slides fade flex flex-col items-center justify-center">
+                    <div class="relative phone-frame-container">
+                        <div class="phone-frame">
+                            <div class="phone-frame-inner overflow-hidden">
+                                <img src="./images/home_screen.png" alt="Home Screen" class="w-full h-full object-cover">
+                            </div>
+                            <div class="phone-notch"></div>
                         </div>
-                        <div class="phone-notch"></div>
                     </div>
-                    <p class="text-center mt-4 font-semibold">Home Screen</p>
+                    <p class="text-center mt-4 font-semibold text-app-purple">Home Screen</p>
                 </div>
                 
-                <div class="relative phone-frame-container">
-                    <div class="phone-frame">
-                        <div class="phone-frame-inner overflow-hidden">
-                            <img src="./images/app-screen2.png" alt="Reading View" class="w-full h-full object-cover">
+                <div class="app-slides fade flex flex-col items-center justify-center">
+                    <div class="relative phone-frame-container">
+                        <div class="phone-frame">
+                            <div class="phone-frame-inner overflow-hidden">
+                                <img src="./images/reading_experience.png" alt="Reading View" class="w-full h-full object-cover">
+                            </div>
+                            <div class="phone-notch"></div>
                         </div>
-                        <div class="phone-notch"></div>
                     </div>
-                    <p class="text-center mt-4 font-semibold">Reading Experience</p>
+                    <p class="text-center mt-4 font-semibold text-app-blue">Reading Experience</p>
                 </div>
                 
-                <div class="relative phone-frame-container">
-                    <div class="phone-frame">
-                        <div class="phone-frame-inner overflow-hidden">
-                            <img src="./images/app-screen3.png" alt="Progress Tracking" class="w-full h-full object-cover">
+                <div class="app-slides fade flex flex-col items-center justify-center">
+                    <div class="relative phone-frame-container">
+                        <div class="phone-frame">
+                            <div class="phone-frame-inner overflow-hidden">
+                                <img src="./images/progress_tracking.png" alt="Progress Tracking" class="w-full h-full object-cover">
+                            </div>
+                            <div class="phone-notch"></div>
                         </div>
-                        <div class="phone-notch"></div>
                     </div>
-                    <p class="text-center mt-4 font-semibold">Progress Tracking</p>
+                    <p class="text-center mt-4 font-semibold text-app-green">Progress Tracking</p>
                 </div>
+
+                <!-- Navigation arrows -->
+                <a class="prev-slide" onclick="changeSlide(-1)">
+                    <i class="fas fa-chevron-left text-gray-600 hover:text-app-purple"></i>
+                </a>
+                <a class="next-slide" onclick="changeSlide(1)">
+                    <i class="fas fa-chevron-right text-gray-600 hover:text-app-purple"></i>
+                </a>
+            </div>
+            
+            <!-- Dots/indicators -->
+            <div class="dots-container text-center mt-8">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
             </div>
         </div>
     </section>
@@ -121,62 +176,61 @@
                 <h2 class="text-3xl font-bold text-gray-800">Mengapa Memilih Bukuku?</h2>
                 <p class="text-gray-600 mt-4 text-xl">Solusi terbaik untuk membangun kebiasaan membaca yang berkelanjutan</p>
             </div>
-            
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                <div class="value-prop-card p-6 bg-white rounded-lg shadow-sm hover:shadow-md">
+                <div class="value-prop-card p-6 bg-white rounded-lg shadow-sm hover:shadow-md border-l-4 border-app-purple">
                     <div class="flex items-start mb-4">
-                        <div class="bg-green-100 p-3 rounded-full">
-                            <i class="fas fa-mobile-alt text-green-600 text-xl"></i>
+                        <div class="bg-purple-50 p-3 rounded-full">
+                            <i class="fas fa-mobile-alt text-app-purple text-xl"></i>
                         </div>
                         <h3 class="text-xl font-bold ml-4 pt-2">Mengurangi Distraksi Gadget</h3>
                     </div>
                     <p class="text-gray-600">Fitur Reading Lock + Pomodoro membantu Anda tetap fokus membaca tanpa terganggu notifikasi atau godaan aplikasi lain.</p>
                 </div>
                 
-                <div class="value-prop-card p-6 bg-white rounded-lg shadow-sm hover:shadow-md">
+                <div class="value-prop-card p-6 bg-white rounded-lg shadow-sm hover:shadow-md border-l-4 border-app-green">
                     <div class="flex items-start mb-4">
-                        <div class="bg-blue-100 p-3 rounded-full">
-                            <i class="fas fa-robot text-blue-600 text-xl"></i>
+                        <div class="bg-green-50 p-3 rounded-full">
+                            <i class="fas fa-robot text-app-green text-xl"></i>
                         </div>
                         <h3 class="text-xl font-bold ml-4 pt-2">Rekomendasi & Perbandingan dengan AI</h3>
                     </div>
                     <p class="text-gray-600">Dapatkan rekomendasi buku yang dipersonalisasi dan bandingkan buku sebelum membeli dengan bantuan AI.</p>
                 </div>
                 
-                <div class="value-prop-card p-6 bg-white rounded-lg shadow-sm hover:shadow-md">
+                <div class="value-prop-card p-6 bg-white rounded-lg shadow-sm hover:shadow-md border-l-4 border-app-blue">
                     <div class="flex items-start mb-4">
-                        <div class="bg-purple-100 p-3 rounded-full">
-                            <i class="fas fa-book text-purple-600 text-xl"></i>
+                        <div class="bg-blue-50 p-3 rounded-full">
+                            <i class="fas fa-book text-app-blue text-xl"></i>
                         </div>
                         <h3 class="text-xl font-bold ml-4 pt-2">Integrasi Buku Fisik & Digital</h3>
                     </div>
                     <p class="text-gray-600">Dapatkan e-book gratis saat membeli buku fisik dan nikmati kemudahan akses dari mana saja.</p>
                 </div>
                 
-                <div class="value-prop-card p-6 bg-white rounded-lg shadow-sm hover:shadow-md">
+                <div class="value-prop-card p-6 bg-white rounded-lg shadow-sm hover:shadow-md border-l-4 border-app-yellow">
                     <div class="flex items-start mb-4">
-                        <div class="bg-yellow-100 p-3 rounded-full">
-                            <i class="fas fa-language text-yellow-600 text-xl"></i>
+                        <div class="bg-yellow-50 p-3 rounded-full">
+                            <i class="fas fa-language text-app-yellow text-xl"></i>
                         </div>
                         <h3 class="text-xl font-bold ml-4 pt-2">Pemahaman Lebih Baik</h3>
                     </div>
                     <p class="text-gray-600">Translation API dan Bookmark Kamus Pribadi membantu Anda memahami kata-kata sulit dalam bacaan Anda.</p>
                 </div>
                 
-                <div class="value-prop-card p-6 bg-white rounded-lg shadow-sm hover:shadow-md">
+                <div class="value-prop-card p-6 bg-white rounded-lg shadow-sm hover:shadow-md border-l-4 border-app-red">
                     <div class="flex items-start mb-4">
-                        <div class="bg-red-100 p-3 rounded-full">
-                            <i class="fas fa-chart-line text-red-600 text-xl"></i>
+                        <div class="bg-red-50 p-3 rounded-full">
+                            <i class="fas fa-chart-line text-app-red text-xl"></i>
                         </div>
                         <h3 class="text-xl font-bold ml-4 pt-2">Konsistensi Membaca</h3>
                     </div>
                     <p class="text-gray-600">Progress Tracker dan Pengingat Membaca memotivasi Anda untuk menyelesaikan buku yang telah dimulai.</p>
                 </div>
                 
-                <div class="value-prop-card p-6 bg-white rounded-lg shadow-sm hover:shadow-md">
+                <div class="value-prop-card p-6 bg-white rounded-lg shadow-sm hover:shadow-md border-l-4 border-app-purple">
                     <div class="flex items-start mb-4">
-                        <div class="bg-teal-100 p-3 rounded-full">
-                            <i class="fas fa-users text-teal-600 text-xl"></i>
+                        <div class="bg-purple-50 p-3 rounded-full">
+                            <i class="fas fa-users text-app-purple text-xl"></i>
                         </div>
                         <h3 class="text-xl font-bold ml-4 pt-2">Komunitas Pembaca</h3>
                     </div>
@@ -189,7 +243,7 @@
                 <p class="text-lg text-gray-600 mt-2">Bukuku menawarkan solusi komprehensif untuk membangun kebiasaan membaca berkelanjutan.</p>
             </div>
         </div>
-    </section>
+    </section>                        <div class="phone-notch"></div>
 
     <!-- Features Section -->
     <section id="features" class="py-20 bg-white">
@@ -200,72 +254,72 @@
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="feature-card p-8 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition bg-white">
-                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
-                        <i class="fas fa-book-open text-2xl text-green-600"></i>
+                    <div class="w-16 h-16 bg-purple-50 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-book-open text-2xl text-app-purple"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-4">Beli Buku Bonus Digital</h3>
                     <p class="text-gray-600">Beli buku fisik dan dapatkan versi digitalnya (e-book) secara gratis di aplikasi Bukuku.</p>
                 </div>
                 
                 <div class="feature-card p-8 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition bg-white">
-                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
-                        <i class="fas fa-language text-2xl text-blue-600"></i>
+                    <div class="w-16 h-16 bg-green-50 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-language text-2xl text-app-green"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-4">Translate API</h3>
                     <p class="text-gray-600">Terjemahkan kata atau frasa asing langsung dalam aplikasi untuk memahami bacaan dengan lebih baik.</p>
                 </div>
                 
                 <div class="feature-card p-8 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition bg-white">
-                    <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mb-6">
-                        <i class="fas fa-bookmark text-2xl text-yellow-600"></i>
+                    <div class="w-16 h-16 bg-yellow-50 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-bookmark text-2xl text-app-yellow"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-4">Bookmark Kamus Pribadi</h3>
                     <p class="text-gray-600">Simpan arti kata-kata sulit yang ingin Anda ingat, baik dari e-book maupun buku fisik.</p>
                 </div>
                 
                 <div class="feature-card p-8 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition bg-white">
-                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6">
-                        <i class="fas fa-highlighter text-2xl text-purple-600"></i>
+                    <div class="w-16 h-16 bg-purple-50 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-highlighter text-2xl text-app-purple"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-4">Quotes Highlight</h3>
                     <p class="text-gray-600">Simpan kutipan atau kalimat menarik dari buku yang ingin diingat, dari buku fisik maupun digital.</p>
                 </div>
                 
                 <div class="feature-card p-8 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition bg-white">
-                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6">
-                        <i class="fas fa-bell text-2xl text-red-600"></i>
+                    <div class="w-16 h-16 bg-red-50 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-bell text-2xl text-app-red"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-4">Pengingat Membaca</h3>
                     <p class="text-gray-600">Dapatkan notifikasi untuk melanjutkan buku yang belum selesai berdasarkan status progress membaca Anda.</p>
                 </div>
                 
                 <div class="feature-card p-8 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition bg-white">
-                    <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
-                        <i class="fas fa-lock text-2xl text-indigo-600"></i>
+                    <div class="w-16 h-16 bg-purple-50 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-lock text-2xl text-app-purple"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-4">Reading Lock + Pomodoro</h3>
                     <p class="text-gray-600">Aktifkan mode Reading Lock dan timer Pomodoro untuk tetap fokus membaca tanpa gangguan.</p>
                 </div>
                 
                 <div class="feature-card p-8 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition bg-white">
-                    <div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mb-6">
-                        <i class="fas fa-chart-line text-2xl text-teal-600"></i>
+                    <div class="w-16 h-16 bg-green-50 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-line text-2xl text-app-green"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-4">Progress Tracker</h3>
                     <p class="text-gray-600">Pantau progress membaca Anda dan dapatkan poin untuk diskon pembelian buku berikutnya.</p>
                 </div>
                 
                 <div class="feature-card p-8 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition bg-white">
-                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-6">
-                        <i class="fas fa-star text-2xl text-orange-600"></i>
+                    <div class="w-16 h-16 bg-yellow-50 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-star text-2xl text-app-yellow"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-4">Ulasan & Rating Buku</h3>
                     <p class="text-gray-600">Berikan review dan rating untuk buku yang telah Anda baca, dan lihat ulasan dari pembaca lain.</p>
                 </div>
                 
                 <div class="feature-card p-8 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition bg-white">
-                    <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mb-6">
-                        <i class="fas fa-heart text-2xl text-pink-600"></i>
+                    <div class="w-16 h-16 bg-red-50 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-heart text-2xl text-app-red"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-4">Koleksi Buku Favorit</h3>
                     <p class="text-gray-600">Tampilkan daftar "My Top 4 Books" untuk memamerkan buku-buku favorit Anda.</p>
@@ -283,17 +337,17 @@
             </div>
             <div class="flex flex-col md:flex-row space-y-12 md:space-y-0">
                 <div class="md:w-1/3 flex flex-col items-center">
-                    <div class="w-20 h-20 bg-green-500 text-white rounded-full flex items-center justify-center text-3xl font-bold mb-6">1</div>
+                    <div class="w-20 h-20 bg-app-purple text-white rounded-full flex items-center justify-center text-3xl font-bold mb-6">1</div>
                     <h3 class="text-xl font-bold mb-4 text-center">Download Aplikasi Bukuku</h3>
                     <p class="text-gray-600 text-center">Dapatkan Bukuku dari App Store atau Google Play secara gratis.</p>
                 </div>
                 <div class="md:w-1/3 flex flex-col items-center">
-                    <div class="w-20 h-20 bg-green-500 text-white rounded-full flex items-center justify-center text-3xl font-bold mb-6">2</div>
+                    <div class="w-20 h-20 bg-app-blue text-white rounded-full flex items-center justify-center text-3xl font-bold mb-6">2</div>
                     <h3 class="text-xl font-bold mb-4 text-center">Buat Akun & Tambahkan Buku</h3>
                     <p class="text-gray-600 text-center">Daftar dengan email atau akun sosial media dan mulai menambahkan koleksi buku Anda.</p>
                 </div>
                 <div class="md:w-1/3 flex flex-col items-center">
-                    <div class="w-20 h-20 bg-green-500 text-white rounded-full flex items-center justify-center text-3xl font-bold mb-6">3</div>
+                    <div class="w-20 h-20 bg-app-green text-white rounded-full flex items-center justify-center text-3xl font-bold mb-6">3</div>
                     <h3 class="text-xl font-bold mb-4 text-center">Nikmati Fitur Premium</h3>
                     <p class="text-gray-600 text-center">Manfaatkan semua fitur untuk meningkatkan pengalaman membaca Anda.</p>
                 </div>
@@ -311,19 +365,19 @@
             
             <div class="flex flex-wrap -mx-4">
                 <div class="w-full lg:w-1/2 px-4 mb-12 lg:mb-0">
-                    <div class="bg-green-50 p-8 rounded-xl h-full">
-                        <h3 class="text-2xl font-bold mb-6">Kebutuhan Pasar</h3>
+                    <div class="bg-gradient-to-br from-purple-50 to-blue-50 p-8 rounded-xl h-full border-l-4 border-app-purple">
+                        <h3 class="text-2xl font-bold mb-6 text-app-purple">Kebutuhan Pasar</h3>
                         <ul class="space-y-4">
                             <li class="flex items-start">
-                                <i class="fas fa-check-circle text-green-600 mt-1 mr-3"></i>
+                                <i class="fas fa-check-circle text-app-green mt-1 mr-3"></i>
                                 <p>Belum ada platform yang secara khusus menawarkan solusi all-in-one untuk membangun kebiasaan membaca berkelanjutan.</p>
                             </li>
                             <li class="flex items-start">
-                                <i class="fas fa-check-circle text-green-600 mt-1 mr-3"></i>
+                                <i class="fas fa-check-circle text-app-green mt-1 mr-3"></i>
                                 <p>Banyak mahasiswa kesulitan menemukan buku yang sesuai, mempertahankan konsistensi, dan mengelola koleksi bacaan mereka.</p>
                             </li>
                             <li class="flex items-start">
-                                <i class="fas fa-check-circle text-green-600 mt-1 mr-3"></i>
+                                <i class="fas fa-check-circle text-app-green mt-1 mr-3"></i>
                                 <p>Meningkatnya literasi digital dan e-book membuat kebutuhan akan aplikasi seperti Bukuku semakin relevan.</p>
                             </li>
                         </ul>
@@ -331,19 +385,19 @@
                 </div>
                 
                 <div class="w-full lg:w-1/2 px-4">
-                    <div class="bg-blue-50 p-8 rounded-xl h-full">
-                        <h3 class="text-2xl font-bold mb-6">Model Bisnis</h3>
+                    <div class="bg-gradient-to-br from-green-50 to-yellow-50 p-8 rounded-xl h-full border-l-4 border-app-green">
+                        <h3 class="text-2xl font-bold mb-6 text-app-green">Model Bisnis</h3>
                         <ul class="space-y-4">
                             <li class="flex items-start">
-                                <i class="fas fa-check-circle text-blue-600 mt-1 mr-3"></i>
+                                <i class="fas fa-check-circle text-app-yellow mt-1 mr-3"></i>
                                 <p>Fitur dasar gratis dengan opsi premium berbayar (model freemium).</p>
                             </li>
                             <li class="flex items-start">
-                                <i class="fas fa-check-circle text-blue-600 mt-1 mr-3"></i>
+                                <i class="fas fa-check-circle text-app-yellow mt-1 mr-3"></i>
                                 <p>Kerjasama dengan toko buku dan penerbit melalui program afiliasi.</p>
                             </li>
                             <li class="flex items-start">
-                                <i class="fas fa-check-circle text-blue-600 mt-1 mr-3"></i>
+                                <i class="fas fa-check-circle text-app-yellow mt-1 mr-3"></i>
                                 <p>Membangun komunitas pembaca yang loyal untuk meningkatkan retensi pengguna jangka panjang.</p>
                             </li>
                         </ul>
@@ -354,19 +408,19 @@
     </section>
 
     <!-- Download Section -->
-    <section id="download" class="py-24 bg-gradient-to-br from-green-600 to-emerald-700 text-white">
+    <section id="download" class="py-24 bg-gradient-to-br from-app-purple to-app-blue text-white">
         <div class="container mx-auto px-6 text-center">
-            <h2 class="text-4xl font-bold mb-4">Download Bukuku Sekarang</h2>
-            <p class="text-xl mb-12 max-w-xl mx-auto">Mulai perjalanan membaca yang lebih baik dan bergabunglah dengan komunitas pembaca Bukuku.</p>
+            <h2 class="text-4xl font-bold mb-4 text-black">Download Bukuku Sekarang</h2>
+            <p class="text-xl mb-12 max-w-xl mx-auto text-black">Mulai perjalanan membaca yang lebih baik dan bergabunglah dengan komunitas pembaca Bukuku.</p>
             <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-                <a href="#" class="bg-white text-green-600 hover:bg-gray-100 px-8 py-4 rounded-lg shadow-lg text-lg font-semibold flex items-center justify-center">
+                <a href="#" class="bg-white text-app-purple hover:bg-gray-100 px-8 py-4 rounded-lg shadow-lg text-lg font-semibold flex items-center justify-center">
                     <i class="fab fa-apple text-2xl mr-3"></i>
                     <div class="text-left">
                         <div class="text-xs">Download on the</div>
                         <div>App Store</div>
                     </div>
                 </a>
-                <a href="#" class="bg-white text-green-600 hover:bg-gray-100 px-8 py-4 rounded-lg shadow-lg text-lg font-semibold flex items-center justify-center">
+                <a href="#" class="bg-white text-app-purple hover:bg-gray-100 px-8 py-4 rounded-lg shadow-lg text-lg font-semibold flex items-center justify-center">
                     <i class="fab fa-google-play text-2xl mr-3"></i>
                     <div class="text-left">
                         <div class="text-xs">Get it on</div>
@@ -375,7 +429,7 @@
                 </a>
             </div>
             <div class="mt-16 flex justify-center">
-                <img src="./images/devices.png" alt="Bukuku on multiple devices" class="max-w-full md:max-w-3xl rounded-lg shadow-xl">
+                <!-- App screenshots in download section can go here -->
             </div>
         </div>
     </section>
@@ -385,8 +439,7 @@
         <div class="container mx-auto px-6">
             <div class="flex flex-wrap">
                 <div class="w-full md:w-1/3 mb-8 md:mb-0">
-                    <img src="./images/logo-white.svg" alt="Bukuku Logo" class="h-8 mb-6">
-                    <p class="mb-4">Membangun kebiasaan membaca berkelanjutan melalui teknologi.</p>
+                    <p class="mb-4 pr-20">Membangun kebiasaan membaca berkelanjutan melalui teknologi.</p>
                     <div class="flex space-x-4">
                         <a href="#" class="text-gray-400 hover:text-white">
                             <i class="fab fa-facebook-f"></i>
@@ -419,11 +472,12 @@
                 </div>
             </div>
             <div class="border-t border-gray-700 mt-12 pt-8 text-center">
-                <p>&copy; 2023 Bukuku. All rights reserved.</p>
+                <p>&copy; 2025 Bukuku. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <script src="./js/script.js"></script>
+    <script src="./js/slideshow.js"></script>
 </body>
 </html>

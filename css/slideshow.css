@@ -1,0 +1,100 @@
+/* Slideshow container */
+.app-slideshow-container {
+    position: relative;
+    padding: 0 40px;
+    margin-bottom: 30px;
+}
+
+/* Hide slides by default */
+.app-slides {
+    display: none;
+    padding: 0 20px;
+    text-align: center; /* Center all content */
+}
+
+/* Show the first slide by default */
+.app-slides:first-child {
+    display: block;
+}
+
+/* Center the phone in the slideshow */
+.app-slideshow-container .phone-frame-container {
+    margin: 0 auto; /* Center the phone frame */
+    display: block; /* Ensure proper block display */
+}
+
+/* Fade animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/* Next & previous buttons */
+.prev-slide, .next-slide {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 24px;
+    transition: 0.3s ease;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 5;
+}
+
+.prev-slide {
+    left: 0;
+}
+
+.next-slide {
+    right: 0;
+}
+
+.prev-slide:hover, .next-slide:hover {
+    background-color: rgba(155, 95, 199, 0.1);
+}
+
+/* The dots/indicators */
+.dots-container {
+    margin-top: 20px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 6px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.active-dot, .dot:hover {
+    background-color: #9B5FC7;
+}
+
+/* For small screens */
+@media (max-width: 640px) {
+    .app-slideshow-container {
+        padding: 0 20px;
+    }
+    
+    .prev-slide, .next-slide {
+        width: 30px;
+        height: 30px;
+        font-size: 18px;
+    }
+}

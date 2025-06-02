@@ -134,21 +134,21 @@ nav.fixed {
     background-color: #f5f5f5;
 }
 
-/* iPhone 14 Plus Frame Styling */
+/* iPhone 14 Plus Frame Styling - Scaled Down */
 .prototype-phone-container {
     position: relative;
     margin: 0 auto;
-    width: 380px;  /* Adjusted from 330px */
-    height: 820px; /* Adjusted from 670px */
+    width: 280px;  /* Reduced from 380px */
+    height: 606px; /* Reduced from 820px, maintaining aspect ratio */
     max-width: 100%;
 }
 
 .prototype-frame {
-    width: 380px;  /* Adjusted from 330px */
-    height: 820px; /* Adjusted from 670px */
+    width: 280px;  /* Reduced from 380px */
+    height: 606px; /* Reduced from 820px, maintaining aspect ratio */
     background-color: #000;
-    border-radius: 55px;
-    padding: 8px;
+    border-radius: 45px;  /* Slightly reduced to match smaller size */
+    padding: 6px;  /* Reduced from 8px */
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
     position: relative;
     overflow: hidden;
@@ -158,21 +158,21 @@ nav.fixed {
     position: relative;
     width: 100%;
     height: 100%;
-    border-radius: 48px;  /* Inner radius to match iPhone 14 Plus */
+    border-radius: 40px;  /* Adjusted for smaller size */
     overflow: hidden;
     background-color: white;
 }
 
-/* Dynamic Island Notch for iPhone 14 Plus */
+/* Dynamic Island Notch - Scaled down */
 .dynamic-island {
     position: absolute;
-    top: 12px;
+    top: 10px;
     left: 50%;
     transform: translateX(-50%);
-    width: 120px;
-    height: 36px;
+    width: 90px; /* Reduced from 120px */
+    height: 27px; /* Reduced from 36px */
     background-color: #000;
-    border-radius: 20px;
+    border-radius: 15px; /* Reduced from 20px */
     z-index: 10;
 }
 
@@ -193,12 +193,12 @@ nav.fixed {
     }
 
     .prototype-phone-container {
-        width: 428px; /* Exact iPhone 14 Plus width */
-        height: 926px; /* Exact iPhone 14 Plus height */
+        width: 321px; /* Reduced from 428px (75% scale) */
+        height: 695px; /* Reduced from 926px (75% scale) */
     }
 
     .prototype-frame {
-        width: 428px; /* Exact iPhone 14 Plus width */
-        height: 926px; /* Exact iPhone 14 Plus height */
+        width: 321px;
+        height: 695px;
     }
 }

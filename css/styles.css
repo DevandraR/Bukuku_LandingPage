@@ -124,3 +124,81 @@ nav.fixed {
         border-bottom-right-radius: 10px;
     }
 }
+
+/* Figma Prototype Embedding */
+.prototype-container {
+    position: relative;
+    width: 100%;
+    max-width: 375px; /* Mobile width */
+    height: 667px;    /* Common mobile height */
+    background-color: #f5f5f5;
+}
+
+/* iPhone 14 Plus Frame Styling */
+.prototype-phone-container {
+    position: relative;
+    margin: 0 auto;
+    width: 380px;  /* Adjusted from 330px */
+    height: 820px; /* Adjusted from 670px */
+    max-width: 100%;
+}
+
+.prototype-frame {
+    width: 380px;  /* Adjusted from 330px */
+    height: 820px; /* Adjusted from 670px */
+    background-color: #000;
+    border-radius: 55px;
+    padding: 8px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    position: relative;
+    overflow: hidden;
+}
+
+.prototype-frame .phone-frame-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 48px;  /* Inner radius to match iPhone 14 Plus */
+    overflow: hidden;
+    background-color: white;
+}
+
+/* Dynamic Island Notch for iPhone 14 Plus */
+.dynamic-island {
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 36px;
+    background-color: #000;
+    border-radius: 20px;
+    z-index: 10;
+}
+
+.prototype-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    z-index: 1;
+}
+
+@media (min-width: 768px) {
+    .prototype-container {
+        max-width: 500px;
+        height: 700px;
+    }
+
+    .prototype-phone-container {
+        width: 428px; /* Exact iPhone 14 Plus width */
+        height: 926px; /* Exact iPhone 14 Plus height */
+    }
+
+    .prototype-frame {
+        width: 428px; /* Exact iPhone 14 Plus width */
+        height: 926px; /* Exact iPhone 14 Plus height */
+    }
+}
